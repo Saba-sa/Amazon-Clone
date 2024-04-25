@@ -1,0 +1,110 @@
+@import "../css-config/mixins.scss";
+.product_section {
+  .content {
+    padding: 50px 0;
+    width: 80%;
+    .product_detail {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 2rem;
+      .product_img {
+        width: 80%;
+        img {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 3px;
+        }
+      }
+      .product_detail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .product_detail_heading {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.751);
+          width: 100%;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+          .product_name {
+            font-size: 40px;
+            font-weight: 700;
+          }
+          .brand {
+            color: #00a0d0;
+          }
+          .similar_line {
+            display: flex;
+            gap: 20px;
+          }
+        }
+        .product_price {
+          i {
+            color: red;
+          }
+        }
+        .product_colors {
+          display: flex;
+          gap: 5px;
+          input[type="color"] {
+            -webkit-appearance: none;
+            border: none;
+            width: 35px;
+            width: 25px;
+            overflow: hidden;
+            border-radius: 50px;
+          }
+          input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+          }
+        }
+        .product_quantiyt {
+          display: flex;
+          align-items: center;
+          span {
+            margin: 10px;
+            border: 1px solid #000;
+            background: black;
+            color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+          }
+        }
+      }
+      .cta {
+        width: 20%;
+        button {
+          padding: 10px 20px;
+          width: 100%;
+          border: none;
+          background: $subhcolor;
+          color: aliceblue;
+          font-size: 17px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+    .slider {
+      width: 100%;
+      margin-bottom: 30px;
+
+      ul.react-multi-carousel-track {
+        width: 100%;
+        li.react-multi-carousel-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .product_img {
+            img {
+              width: 100%;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

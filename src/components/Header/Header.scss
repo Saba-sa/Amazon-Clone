@@ -1,0 +1,161 @@
+@import "../../css-config/mixins.scss";
+header {
+  background: $hColor;
+  color: $wColor;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 20px;
+
+    .logo {
+      width: 150px;
+      object-fit: contain;
+    }
+    .header-search {
+      display: flex;
+      flex: 1;
+      height: 45px;
+      overflow: hidden;
+      input {
+        width: 100%;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        font-size: 18px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      .search-icon {
+        background: $orange;
+        display: flex;
+        align-items: center;
+        width: 5%;
+        justify-content: center;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        .search-icon svg {
+          fill: black;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      }
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .header-options select {
+        border: none;
+        color: white;
+        background: transparent;
+        width: 100%;
+        background: $hColor;
+        cursor: pointer;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      .header-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        flex-direction: column;
+        margin-left: 20px;
+        font-size: 14px;
+        white-space: nowrap;
+        .header-option-bottom-text {
+          font-weight: bolder;
+          font-size: 16px;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        .header-option-top-text {
+          cursor: pointer;
+          &:last-child {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            width: 12%;
+            white-space: nowrap;
+          }
+        }
+        // header-option-left-text
+        .header-option-left-text {
+          svg {
+            width: 30px;
+            cursor: pointer;
+          }
+          .header-option-left-top-text {
+            position: absolute;
+            top: 5px;
+            right: 2.5%;
+            font-size: 16px;
+            color: $orange;
+            cursor: pointer;
+          }
+        }
+        .header-option-left-bottom-text {
+          font-size: 16px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* styling navi now */
+nav {
+  background: $subhcolor;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $wColor;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2px;
+      margin: 0;
+      li {
+        list-style: none;
+        border: 1px solid transparent;
+        height: 35px;
+        align-content: center;
+        padding: 0px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border 0.2s;
+        &:hover {
+          border: 1px solid $wColor;
+        }
+      }
+    }
+    .hamburger-icon {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+  }
+}

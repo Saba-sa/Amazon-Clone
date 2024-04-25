@@ -1,0 +1,23 @@
+footer {
+  position: relative;
+  top: 540px;
+  .btt {
+    width: 100%;
+    color: aliceblue;
+    text-align: center;
+    background: #37475a;
+    padding: 15px 0;
+    cursor: pointer;
+    &:hover {
+      background: #43566e;
+    }
+  }
+  .footerOptionsSection {
+    border: 10px solid #232f3e;
+    background: #232f3e;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

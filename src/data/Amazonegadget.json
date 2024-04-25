@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 100,
+      "name": "Smartphones",
+      "img":"phone.jpg",
+      "customerReviews":[
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        },
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        }],
+        "stars no":2,
+        "price":134,
+        "brand":"Abcsdfsdf",
+        "discount":10,
+        "seller Name":"Abc asdasd",
+        "seller reviews":3,
+        "availability":true,
+        "colors_avaiable":[
+          "#a83232","#32a83a","#a8a632","#a8a232"
+        ],
+    "product_description":"While #a83232ux in itself is a small library, the underlying concepts and the ecosystem around it are large and complex. In this book we cover the core and common concepts and methods a developer needs to work with #a83232ux on both small and large-scale applications.The book is separated into three parts. In the first part you will learn the basics of #a83232ux. Chapter1 covers the core concepts behind #a83232ux, introducing the different “actors” and how it is built. InChapter 2, we build an example project step by step; here, youwill learn how to use #a83232ux in aprojectlarge applications with #a83232ux.It is highly recommended that you start by reading the first part as a whole. Even if you already haveknowledge of #a83232ux and have used it, the opening chapters will clarify all the underlyingto solve real problems fast—this book will provide new ideas and insights to help you onyour path. ",
+        "Images":["../assets/products/jar.jpg"],
+        "videos":["../assets/products/jar.jpg"]
+   
+}
+,{
+  "id": 112,
+      "name": "Tablets",
+      "img":"tablet.jpg",
+      "customerReviews":[
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        },
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        }],
+        "stars no":4,
+        "price":89,
+        "brand":"Abcsdfsdf",
+        "discount":10,
+        "seller Name":"Abc asdasd",
+        "seller reviews":3,
+        "availability":true,
+        "colors_avaiable":[
+          "#a83232","#32a83a","#a8a632","#a8a232"
+        ],
+    "product_description":"While #a83232ux in itself is a small library, the underlying concepts and the ecosystem around it are large and complex. In this book we cover the core and common concepts and methods a developer needs to work with #a83232ux on both small and large-scale applications.The book is separated into three parts. In the first part you will learn the basics of #a83232ux. Chapter1 covers the core concepts behind #a83232ux, introducing the different “actors” and how it is built. InChapter 2, we build an example project step by step; here, youwill learn how to use #a83232ux in aprojectlarge applications with #a83232ux.It is highly recommended that you start by reading the first part as a whole. Even if you already haveknowledge of #a83232ux and have used it, the opening chapters will clarify all the underlyingto solve real problems fast—this book will provide new ideas and insights to help you onyour path. ",
+        "Images":["../assets/products/jar.jpg"],
+        "videos":["../assets/products/jar.jpg"]
+   
+}
+,
+    {
+      "id": 113,
+      "name": "Laptops",
+      "img":"pc.jpg",
+      "customerReviews":[
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        },
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        }],
+        "stars no":5,
+        "price":134,
+        "brand":"Abcsdfsdf",
+        "discount":10,
+        "seller Name":"Abc asdasd",
+        "seller reviews":5,
+        "availability":true,
+        "colors_avaiable":[
+          "#a83232","#32a83a","#a8a632","#a8a232"
+        ],
+    "product_description":"While #a83232ux in itself is a small library, the underlying concepts and the ecosystem around it are large and complex. In this book we cover the core and common concepts and methods a developer needs to work with #a83232ux on both small and large-scale applications.The book is separated into three parts. In the first part you will learn the basics of #a83232ux. Chapter1 covers the core concepts behind #a83232ux, introducing the different “actors” and how it is built. InChapter 2, we build an example project step by step; here, youwill learn how to use #a83232ux in aprojectlarge applications with #a83232ux.It is highly recommended that you start by reading the first part as a whole. Even if you already haveknowledge of #a83232ux and have used it, the opening chapters will clarify all the underlyingto solve real problems fast—this book will provide new ideas and insights to help you onyour path. ",
+        "Images":["../assets/products/jar.jpg"],
+        "videos":["../assets/products/jar.jpg"]
+   
+}
+    ,
+    {
+      "id": 114,
+      "name": "TVs",
+      "img":"tv.jpg",
+      "customerReviews":[
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        },
+        {
+          "name": "Abc Def"
+          ,"reviews":"custom reviews for this product. "
+        }],
+        "stars no":5,
+        "price":14,
+        "brand":"Abcsdfsdf",
+        "discount":10,
+        "seller Name":"Abc asdasd",
+        "seller reviews":1,
+        "availability":true,
+        "colors_avaiable":[
+          "#a83232","#32a83a","#a8a632","#a8a232"
+        ],
+    "product_description":"While #a83232ux in itself is a small library, the underlying concepts and the ecosystem around it are large and complex. In this book we cover the core and common concepts and methods a developer needs to work with #a83232ux on both small and large-scale applications.The book is separated into three parts. In the first part you will learn the basics of #a83232ux. Chapter1 covers the core concepts behind #a83232ux, introducing the different “actors” and how it is built. InChapter 2, we build an example project step by step; here, youwill learn how to use #a83232ux in aprojectlarge applications with #a83232ux.It is highly recommended that you start by reading the first part as a whole. Even if you already haveknowledge of #a83232ux and have used it, the opening chapters will clarify all the underlyingto solve real problems fast—this book will provide new ideas and insights to help you onyour path. ",
+        "Images":["../assets/products/jar.jpg"],
+        "videos":["../assets/products/jar.jpg"]
+   
+}
+  ]
+}

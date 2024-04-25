@@ -1,0 +1,28 @@
+.OnebyThree-section {
+  height: 400px;
+  background: white;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 1.5rem;
+  padding-bottom: 1rem;
+  .game-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .child {
+      width: 30%;
+      img {
+        width: 100%;
+      }
+      &:nth-child(1) {
+        flex: 100%;
+        width: 100%;
+      }
+    }
+  }
+  span {
+    color: blue;
+  }
+}
