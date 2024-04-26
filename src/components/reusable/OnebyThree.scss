@@ -1,12 +1,14 @@
 .OnebyThree-section {
   height: 400px;
   background: white;
-  width: 87%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 0 1.5rem;
   padding-bottom: 1rem;
+  justify-content: center;
+  gap: 30px;
   .game-data {
     display: flex;
     flex-wrap: wrap;

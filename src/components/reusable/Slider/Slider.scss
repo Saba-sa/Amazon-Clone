@@ -3,16 +3,13 @@
   width: 95%;
   padding: 10px;
   border-radius: 5px;
-  ul.react-multi-carousel-track {
-    width: 90%;
-    li.react-multi-carousel-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 60%;
-        cursor: pointer;
-      }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60%;
+      cursor: pointer;
     }
   }
 }

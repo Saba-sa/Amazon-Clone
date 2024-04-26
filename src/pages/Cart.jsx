@@ -3,6 +3,7 @@ import "./Cart.scss";
 import { useEcommerceStore } from "../Store/Ecommercestore";
 import { useNavigate } from "react-router-dom";
 import { data } from "../data/AllData";
+import SliderComponent from "../components/reusable/Slider/SliderComponent";
 const Cart = ({ signin = true }) => {
   const navigator = useNavigate();
   const { Add2Localstorage, cartDeatil, setcartDeatil, remove4rmLocalStorage } =
@@ -72,136 +73,144 @@ const Cart = ({ signin = true }) => {
         </div>
       ) : (
         <div className="contains-item-ui">
-          <div className="cart-item-detail">
-            <div className="heaing">Shopping Cart</div>
-            <button className="action">Deselect all items</button>
-            <div className="ruler"></div>
-            <div className="items">
-              {cartDeatil?.map((item) => {
-                const { id, img, name, price, quantity, dataFromApi } = item;
-                return (
-                  <div className="item" key={id}>
-                    <input type="checkbox" name="buyStatus" id="buyStatus" />
+          <div className="container mx-auto ">
+            <div className="sm:flex shadow-md mb-4  ">
+              <div className="  w-full  sm:w-3/4 bg-white px-10 py-10">
+                <div className="flex justify-between border-b pb-8">
+                  <h1 className="font-semibold text-2xl">Shopping Cart</h1>
+                  <h2 className="font-semibold text-2xl">3 Items</h2>
+                </div>
+                {cartDeatil?.map((item) => {
+                  const { id, img, name, price, quantity, dataFromApi } = item;
+                  return (
+                    <div key={id}>
+                      <div className="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
+                        <div className="md:w-4/12 2xl:w-1/4 w-full">
+                          {dataFromApi ? (
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="api-img"
+                            />
+                          ) : (
+                            <img
+                              src={require(`../assets/products/${img}`)}
+                              alt="desktop"
+                            />
+                          )}
+                        </div>
+                        <div className="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
+                          <p className="text-xs leading-3 text-gray-800 md:pt-0 pt-4">
+                            RF293
+                          </p>
+                          <div className="flex items-center justify-between w-full">
+                            <p className="text-base font-black leading-none text-gray-800">
+                              {name}
+                            </p>
+                            <select
+                              aria-label="Select quantity"
+                              className="py-2 px-1 border border-gray-200 mr-6 focus:outline-none"
+                              name="quantity"
+                              id="quantity"
+                              onChange={(e) => updateQuantity(e, item)}
+                            >
+                              <option value="quantity" selected disabled>
+                                quantity select
+                              </option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                            </select>
+                          </div>
+                          <p className="text-xs leading-3 text-gray-600 pt-2"></p>
+                          <p className="text-xs leading-3 text-gray-600 py-4">
+                            Color: Black default
+                          </p>
 
-                    {dataFromApi ? (
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="api-img"
-                      />
-                    ) : (
-                      <img
-                        src={require(`../assets/products/${img}`)}
-                        alt="desktop"
-                      />
-                    )}
-                    <div className="item-detail">
-                      <div className="item-top">
-                        <div className="item-name">{name}</div>
-                        <div className="item-price">
-                          <div className="item-price-value">
-                            <div className="currency">$</div>
-                            <div className="value">{price}</div>
+                          <div className="flex items-center justify-between pt-5">
+                            <div className="flex itemms-center">
+                              <p
+                                className="text-xs leading-3  text-red-500 pl-5 cursor-pointer"
+                                onClick={() => remove4rmLocalStorage(id)}
+                              >
+                                Remove
+                              </p>
+                            </div>
+                            <p className="text-base font-black leading-none text-gray-800">
+                              {price}
+                            </p>
                           </div>
                         </div>
-                      </div>
-                      <div className="staus">in Stock</div>
-                      <div className="color">
-                        <b>Color:</b>
-                        <span>Yellow</span>
-                      </div>
-
-                      <div className="size">
-                        <b>Size:</b>
-                        <span>Single Can (3 Balls)</span>
-                      </div>
-                      <div className="quantity">
-                        <b>Quantity:</b>
-                        <p>{quantity}</p>
-                        <select
-                          name="quantity"
-                          id="quantity"
-                          onChange={(e) => updateQuantity(e, item)}
-                        >
-                          <option value="quantity" selected disabled>
-                            quantity select
-                          </option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                      </div>
-                      <div className="action">
-                        <button
-                          className="action-btn"
-                          onClick={() => remove4rmLocalStorage(id)}
-                        >
-                          Remove
-                        </button>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="more-detail-about-item">
-            <div className="cart-item-checkout">
-              <div className="heading">
-                Subtotal(var items): <span className="price">${Total}</span>
+                  );
+                })}
               </div>
-              <button className="btn">Proceed to checkout</button>
-            </div>
-            <div className="frequently-repurchased-items">
-              <div className="heading">
-                <h4>Explore frequently repurchased items</h4>
-                <div className="items">
-                  {frequentlyBought.map((item) => {
-                    const { img, price } = item;
-
-                    return (
-                      <div className="item">
-                        <div className="item-img">
-                          <img
-                            src={require(`../assets/products/${img}`)}
-                            alt="title"
-                          />
-                        </div>
-                        <div className="item-detail">
-                          <div className="item-title">
-                            <h1>Coat</h1>
-                          </div>
-                          <div className="item-rating">
-                            <span className="reviews">
-                              {item["stars no"]}stars
-                            </span>
-                          </div>
-                          <div className="item-price">
-                            <span className="price">${price}</span>
-                          </div>
-                          <button
-                            className="btn"
-                            onClick={() => Add2Localstorage(item)}
-                          >
-                            Add To Cart
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
+              <div
+                id="summary"
+                className=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10 bg-white ml-4 "
+              >
+                <h1 className="font-semibold text-2xl border-b pb-8">
+                  Order Summary
+                </h1>
+                <div className="flex justify-between mt-10 mb-5">
+                  <span className="font-semibold text-sm uppercase">
+                    Items {cartDeatil.length}
+                  </span>
+                  <span className="font-semibold text-sm">price$</span>
+                </div>
+                <div>
+                  <label className="font-medium inline-block mb-3 text-sm uppercase">
+                    Shipping
+                  </label>
+                  <select className="block p-2 text-gray-600 w-full text-sm">
+                    <option>Standard shipping - $10.00</option>
+                  </select>
+                </div>
+                <div className="py-10">
+                  <label
+                    htmlFor="promo"
+                    className="font-semibold inline-block mb-3 text-sm uppercase"
+                  >
+                    Promo Code
+                  </label>
+                  <input
+                    type="text"
+                    id="promo"
+                    placeholder="Enter your code"
+                    className="p-2 text-sm w-full"
+                  />
+                </div>
+                <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
+                  Apply
+                </button>
+                <div className="border-t mt-8">
+                  <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+                    <span>Total cost</span>
+                    <span>${Total}</span>
+                  </div>
+                  <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
+                    Checkout
+                  </button>
                 </div>
               </div>
             </div>
+            <SliderComponent
+              data={frequentlyBought}
+              title="Explore frequently repurchased items"
+              dataFromApi={false}
+            />
           </div>
         </div>
       )}
+      ;
     </section>
   );
 };

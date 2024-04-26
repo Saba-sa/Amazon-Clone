@@ -8,23 +8,43 @@ const Oneitem = ({ data, dataFromApi = false }) => {
 
     return (
       <div className="oneItem-section">
-        {dataFromApi ? <h1>{category}</h1> : <h1>{name}</h1>}
-        <div className="game-data">
-          <div
-            className="child"
-            onClick={() =>
-              navi(`/Products/${id}`, {
-                state: dataFromApi ? "yes" : "no",
-              })
-            }
-          >
-            {dataFromApi ? (
-              <img src={image} alt={title} />
-            ) : (
-              <img src={require(`../../assets/products/${img}`)} alt={name} />
-            )}
+        <div className=" flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50  sm:py-12">
+          {dataFromApi ? (
+            <h1 className="mb-6">{category}</h1>
+          ) : (
+            <h1 h1 className="mb-6">
+              {name}
+            </h1>
+          )}
+          <div className="max-w-screen-md mx-auto w-full">
+            <div className="grid grid-cols-1 gap-6">
+              <div
+                className="child"
+                onClick={() =>
+                  navi(`/Products/${id}`, {
+                    state: dataFromApi ? "yes" : "no",
+                  })
+                }
+              >
+                <div className="w-full">
+                  {dataFromApi ? (
+                    <img src={image} alt={title} />
+                  ) : (
+                    <img
+                      src={require(`../../assets/products/${img}`)}
+                      alt={name}
+                    />
+                  )}
+                </div>
+
+                <div className=" w-full flex justify-center">
+                  <span className="text-white">
+                    <p className="mt-2 cursor-pointer">see more</p>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
-          <span>See more</span>
         </div>
       </div>
     );

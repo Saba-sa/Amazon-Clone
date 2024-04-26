@@ -1,7 +1,7 @@
 import React from "react";
 import Oneitem from "../reusable/Oneitem";
 import Fouritems from "../reusable/Fouritems";
-import "./Main.scss";
+// import "./Main.scss";
 import Game from "../../data/Game_accessories.json";
 import Fragarences from "../../data/Fragarences.json";
 import Amazonegadget from "../../data/Amazonegadget.json";
@@ -13,15 +13,65 @@ const Main = () => {
   return (
     <section className="max-width main-section">
       <div className="content">
-        <Fouritems heading="Gaming accessories" data={Game.data} />
-        <Oneitem data={Game.data[0]} dataFromApi={false} />
-        <Fouritems heading="Refresh your space" data={Fragarences.data} />
-        <OnebyThree heading="Amazone Gadget Store" data={Amazonegadget.data} />
+        <div className="relative top-[-350px] flex min-h-screen flex-col justify-center overflow-hidden  sm:py-12">
+          <div className="mx-auto max-w-screen-2xl px-4 w-full">
+            <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Fouritems heading="Gaming accessories" data={Game.data} />{" "}
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Oneitem data={Game.data[0]} dataFromApi={false} />
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Fouritems
+                    heading="Refresh your space"
+                    data={Fragarences.data}
+                  />
+                </div>
+              </div>
 
-        <Fouritems heading="Shop deals in Fashion" data={Shopdetail.data} />
-        <Oneitem data={Game.data[3]} dataFromApi={false} />
-        <Fouritems heading="Fashion trends you like" data={Fashon.data} />
-        <Oneitem data={Game.data[1]} dataFromApi={false} />
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <OnebyThree
+                    heading="Amazone Gadget Store"
+                    data={Amazonegadget.data}
+                  />
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Fouritems
+                    heading="Shop deals in Fashion"
+                    data={Shopdetail.data}
+                  />
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Oneitem data={Game.data[3]} dataFromApi={false} />{" "}
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Fouritems
+                    heading="Fashion trends you like"
+                    data={Fashon.data}
+                  />
+                </div>
+              </div>
+              <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                <div className="h-auto overflow-hidden">
+                  <Oneitem data={Game.data[1]} dataFromApi={false} />{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

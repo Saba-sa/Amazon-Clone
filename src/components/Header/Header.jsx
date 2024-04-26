@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import logo from "../../assets/Amazon-Logo-3.svg";
-import { IoSearchSharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useEcommerceStore } from "../../Store/Ecommercestore";
+import Options from "./Option.jsx";
+import { IoSearchSharp } from "react-icons/io5";
 
 const Header = () => {
   const { cartLenght } = useEcommerceStore();
-
+  const [showAll, setshowAll] = useState(false);
   return (
     <>
+      <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        Get free delivery on orders over $100
+      </p>
       <header className="max-width">
         <div className="content">
           <Link to="/">
@@ -70,8 +74,9 @@ const Header = () => {
       </header>
       <nav className="max-width">
         <div className="content">
-          <div className="hamburger-icon">
+          <div className="hamburger-icon" onClick={() => setshowAll(!showAll)}>
             <FaBars />
+
             <span>All</span>
           </div>
           <ul>
@@ -83,6 +88,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
+      {showAll && <Options />}
     </>
   );
 };

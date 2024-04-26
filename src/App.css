@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "./css-config/mixins.scss";
 .max-width {
   max-width: 1800px;

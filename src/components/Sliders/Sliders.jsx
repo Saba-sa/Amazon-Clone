@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sliders.scss";
-import Slider from "../reusable/Slider/Slider";
+import SliderComponent from "../reusable/Slider/SliderComponent";
 import Oneitem from "../reusable/Oneitem";
 import Fouritems from "../reusable/Fouritems";
 import { Datafetch } from "../../dataFetch/Datafetch.js";
@@ -19,14 +19,18 @@ const Sliders = () => {
     <section className="max-width slider-section">
       <div className="content">
         <div className="slider1">
-          <Slider
+          <SliderComponent
             data={data_Electronics}
             title={"Electronics"}
             dataFromApi={true}
           />
         </div>
         <div className="slider2">
-          <Slider data={data_Jewleries} title={"Jewelery"} dataFromApi={true} />
+          <SliderComponent
+            data={data_Jewleries}
+            title={"Jewelery"}
+            dataFromApi={true}
+          />
         </div>
         <div className="slider3">
           <Oneitem data={data_menClothing[0]} dataFromApi={true} />
@@ -35,36 +39,40 @@ const Sliders = () => {
           <Oneitem data={data_womenClothing[3]} dataFromApi={true} />
         </div>
         <div className="slider4">
-          <Slider
+          <SliderComponent
             data={data_womenClothing}
             title={"Women's Clothes"}
             dataFromApi={true}
           />
         </div>
         <div className="slider5">
-          <Slider
+          <SliderComponent
             data={data_menClothing}
             title={"Men's Clothes"}
             dataFromApi={true}
           />
         </div>
         <div className="slider6">
-          <Oneitem data={data_menClothing[4]} dataFromApi={true} />
-          <Oneitem data={data_womenClothing[1]} dataFromApi={true} />
+          <Oneitem data={data_menClothing[3]} dataFromApi={true} />
+          <Oneitem data={data_womenClothing[2]} dataFromApi={true} />
           <Fouritems heading="Eat" data={[...data.data]} />
         </div>
         <div className="slider7">
-          <Slider data={data_Jewleries} title={"Jewelery"} dataFromApi={true} />
+          <SliderComponent
+            data={data_Jewleries}
+            title={"Jewelery"}
+            dataFromApi={true}
+          />
         </div>
         <div className="slider8">
-          <Slider
+          <SliderComponent
             data={data_womenClothing}
             title={"Women's Clothes"}
             dataFromApi={true}
           />
         </div>
         <div className="slider9">
-          <Slider
+          <SliderComponent
             data={data_menClothing}
             title={"Men's Clothes"}
             dataFromApi={true}
