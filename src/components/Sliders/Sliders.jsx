@@ -33,7 +33,7 @@ const Sliders = () => {
             dataFromApi={true}
           />
         </div>
-        <div className="slider3 w-full px-10 flex gap-4 flex-col items-center sm:flex-row justify-center overflow-hidden ">
+        <div className=" sm:w-full px-10 flex gap-4 flex-col items-center sm:flex-row justify-center overflow-hidden w-10/12 ">
           <div>
             <Oneitem data={data_menClothing[0]} dataFromApi={true} />
           </div>
@@ -64,7 +64,7 @@ const Sliders = () => {
             dataFromApi={true}
           />
         </div>
-        <div className="slider6 overflow-hidden px-10 w-full flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="slider6 overflow-hidden px-10 sm:w-full flex flex-col sm:flex-row gap-4 justify-center w-10/12 ">
           <div>
             <Oneitem data={data_menClothing[3]} dataFromApi={true} />
           </div>

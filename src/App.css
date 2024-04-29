@@ -5,7 +5,13 @@
 .max-width {
   max-width: 1800px;
   margin: auto;
-  width: 100%;
+  width: 94%;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .max-width {
+    width: 100%;
+  }
 }
 .content {
   width: 96%;
