@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Header.scss";
 import logo from "../../assets/Amazon-Logo-3.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -15,37 +14,58 @@ const Header = () => {
       <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
         Get free delivery on orders over $100
       </p>
-      <header className="max-width">
-        <div className="content">
-          <Link to="/">
-            <img src={logo} alt="logo of amazone" className="logo" />
+      <header
+        className="max-width sticky top-0 z-10
+       p-4 overflow-hidden bg-slate-900"
+      >
+        <div className="content flex sm:items-center  flex-col sm:flex-row gap-4  ">
+          <Link to="/" className="w-1/6">
+            <img
+              src={logo}
+              alt="logo of amazone"
+              className="w-full  object-cover"
+            />
           </Link>
-          <div className="header-search">
-            <input type="text" />
-            <div className="search-icon">
-              <IoSearchSharp />
+          <div className="flex w-full h-10 ">
+            <input
+              type="text"
+              className="w-full border-none outline-none rounded-l-md text-black px-2 "
+            />
+            <div className="flex items-center bg-orange-500 p-4 rounded-r-md">
+              <IoSearchSharp
+                fill="black"
+                fontSize={20}
+                className="cursor-pointer"
+              />
             </div>
           </div>
-          <div className="header-nav">
-            <div className="header-options">
-              <select name="language">
+          <div className="flex items-center justify-around gap-4 ">
+            <div className="border-none text-white  width-full cursor-pointer">
+              <select
+                name="language"
+                className="bg-slate-900  focus:border-none focus:outline-none"
+              >
                 <option value="Eng">EN</option>
                 <option value="PKR">PKR</option>
                 <option value="USD">USD</option>
                 <option value="IND">IND</option>
               </select>
             </div>
-            <div className="header-options">
-              <span className="header-option-top-text">Hello, sign in</span>
-              <span className="header-option-bottom-text">Account & Lists</span>
+            <div className="flex items-center justify-between text-white flex-col ml-4 whitespace-nowrap text-md">
+              <span className="cursor-pointer">Hello, sign in</span>
+              <span className="text-lg font-semibold whitespace-nowrap block">
+                Account & Lists
+              </span>
             </div>
-            <div className="header-options">
-              <span className="header-option-top-text">Returnd</span>
-              <span className="header-option-bottom-text">& Orders</span>
+            <div>
+              <span className="text-white cursor-pointer">Returnd</span>
+              <span className="text-white text-lg font-semibold whitespace-nowrap block">
+                & Orders
+              </span>
             </div>
             <Link to={"/cart"}>
-              <div className="header-options">
-                <div className="header-option-left-text">
+              <div className="cursor-pointer ">
+                <div className="relative ">
                   <svg
                     enableBackground="new 0 0 40 40"
                     id="\u0421\u043B\u043E\u0439_1"
@@ -62,29 +82,42 @@ const Header = () => {
                       />
                     </g>
                   </svg>
-                  <span className="header-option-left-top-text">
+                  <span className="absolute -top-4 text-orange-400 right-0">
                     {cartLenght}
                   </span>
                 </div>
-                <span className="header-option-left-bottom-text">Cart</span>
+                <span className="font-semibold text-white ">Cart</span>
               </div>
             </Link>
           </div>
         </div>
       </header>
-      <nav className="max-width">
-        <div className="content">
-          <div className="hamburger-icon" onClick={() => setshowAll(!showAll)}>
+      <nav className="max-width bg-slate-800 text-white">
+        <div className="content hidden sm:flex items-center gap-4">
+          <div
+            className="flex items-center gap-1 cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white"
+            onClick={() => setshowAll(!showAll)}
+          >
             <FaBars />
 
             <span>All</span>
           </div>
-          <ul>
-            <li>Today's Deals</li>
-            <li>Customer Service</li>
-            <li>Registry</li>
-            <li>Gift Cards</li>
-            <li>Sell</li>
+          <ul className="flex gap-4 ">
+            <li className="cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white">
+              Today's Deals
+            </li>
+            <li className="cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white">
+              Customer Service
+            </li>
+            <li className="cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white">
+              Registry
+            </li>
+            <li className="cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white">
+              Gift Cards
+            </li>
+            <li className="cursor-pointer border-2 border-transparent px-2 hover:border-2 hover:border-white">
+              Sell
+            </li>
           </ul>
         </div>
       </nav>

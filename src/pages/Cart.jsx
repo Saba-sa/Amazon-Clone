@@ -74,7 +74,7 @@ const Cart = ({ signin = true }) => {
       ) : (
         <div className="contains-item-ui">
           <div className="container mx-auto ">
-            <div className="sm:flex shadow-md mb-4  ">
+            <div className="sm:flex shadow-md mb-4  gap-6">
               <div className="  w-full  sm:w-3/4 bg-white px-10 py-10">
                 <div className="flex justify-between border-b pb-8">
                   <h1 className="font-semibold text-2xl">Shopping Cart</h1>
@@ -155,7 +155,7 @@ const Cart = ({ signin = true }) => {
               </div>
               <div
                 id="summary"
-                className=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10 bg-white ml-4 "
+                className="w-full  mt-4 sm:w-1/4   md:w-1/2   px-8 py-10 bg-white "
               >
                 <h1 className="font-semibold text-2xl border-b pb-8">
                   Order Summary

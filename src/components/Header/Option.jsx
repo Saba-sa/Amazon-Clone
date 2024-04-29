@@ -4,8 +4,8 @@ const Option = () => {
   return (
     <>
       <x-guest-layout>
-        <div className="bg-white" x-data="{mobileMenuOpen: false}">
-          <header className="relative bg-white">
+        <div className="bg-white " x-data="{mobileMenuOpen: false}">
+          <header className="relative bg-white z-30">
             <div
               x-show="mobileMenuOpen"
               className="relative z-40 lg:hidden"

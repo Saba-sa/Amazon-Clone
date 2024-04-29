@@ -1,54 +1,56 @@
 import React from "react";
-import "./Footer.scss";
 const FooterOptions = () => {
   return (
-    <div className="footerOptionsSection">
-      <div className="footer_option">
+    <div
+      className=" flex flex-wrap bg-slate-900 text-white
+    gap-4 px-2 md:p-6  md:justify-evenly"
+    >
+      <div className="mt-2">
         <ul>
           <h3>Get to Know Us</h3>
-          <li>Careers</li>
-          <li>Blog</li>
-          <li>About Amazone</li>
-          <li>Investor Relations</li>
-          <li>Amazone Devices</li>
-          <li>Amazone Science</li>
+          <li className="cursor-pointer">Careers</li>
+          <li className="cursor-pointer">Blog</li>
+          <li className="cursor-pointer">About Amazone</li>
+          <li className="cursor-pointer">Investor Relations</li>
+          <li className="cursor-pointer">Amazone Devices</li>
+          <li className="cursor-pointer">Amazone Science</li>
         </ul>
       </div>
-      <div className="footer_option">
+      <div>
         <ul>
           <h3>Make Money with US</h3>
-          <li>Sell products on Amazone</li>
-          <li>Sell on Amazone Buisness</li>
-          <li>Sell apps on Amazone</li>
-          <li>Become an Affilate</li>
-          <li>Advertise Your Products</li>
-          <li>Self-Publish with Us</li>
-          <li>Host an Amazone Hub</li>
-          <li>See More Make Money with Us</li>
+          <li className="cursor-pointer">Sell products on Amazone</li>
+          <li className="cursor-pointer">Sell on Amazone Buisness</li>
+          <li className="cursor-pointer">Sell apps on Amazone</li>
+          <li className="cursor-pointer">Become an Affilate</li>
+          <li className="cursor-pointer">Advertise Your Products</li>
+          <li className="cursor-pointer">Self-Publish with Us</li>
+          <li className="cursor-pointer">Host an Amazone Hub</li>
+          <li className="cursor-pointer">See More Make Money with Us</li>
         </ul>
       </div>
-      <div className="footer_option">
+      <div>
         <ul>
           <h3>Get to Know Us</h3>
-          <li>Careers</li>
-          <li>Blog</li>
-          <li>About Amazone</li>
-          <li>Investor Relations</li>
-          <li>Amazone Devices</li>
-          <li>Amazone Science</li>
+          <li className="cursor-pointer">Careers</li>
+          <li className="cursor-pointer">Blog</li>
+          <li className="cursor-pointer">About Amazone</li>
+          <li className="cursor-pointer">Investor Relations</li>
+          <li className="cursor-pointer">Amazone Devices</li>
+          <li className="cursor-pointer">Amazone Science</li>
         </ul>
       </div>
-      <div className="footer_option">
+      <div>
         <ul>
           <h3>Make Money with US</h3>
-          <li>Sell products on Amazone</li>
-          <li>Sell on Amazone Buisness</li>
-          <li>Sell apps on Amazone</li>
-          <li>Become an Affilate</li>
-          <li>Advertise Your Products</li>
-          <li>Self-Publish with Us</li>
-          <li>Host an Amazone Hub</li>
-          <li>See More Make Money with Us</li>
+          <li className="cursor-pointer">Sell products on Amazone</li>
+          <li className="cursor-pointer">Sell on Amazone Buisness</li>
+          <li className="cursor-pointer">Sell apps on Amazone</li>
+          <li className="cursor-pointer">Become an Affilate</li>
+          <li className="cursor-pointer">Advertise Your Products</li>
+          <li className="cursor-pointer">Self-Publish with Us</li>
+          <li className="cursor-pointer">Host an Amazone Hub</li>
+          <li className="cursor-pointer">See More Make Money with Us</li>
         </ul>
       </div>
       <div></div>
