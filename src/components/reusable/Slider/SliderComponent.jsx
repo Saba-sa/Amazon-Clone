@@ -6,21 +6,24 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../Loader/Loader";
 const SliderComponent = ({ data, title, dataFromApi = false }) => {
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
+    xxl: {
+      breakpoint: { min: 1537 },
+      items: 6,
+    },
+    xl: {
+      breakpoint: { max: 1536, min: 1024 },
       items: 5,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    lg: {
+      breakpoint: { max: 1024, min: 769 },
       items: 3,
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    sm: {
+      breakpoint: { max: 768, min: 640 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 1,
     },
   };
@@ -32,6 +35,40 @@ const SliderComponent = ({ data, title, dataFromApi = false }) => {
     slidesToShow: 6,
     slidesToScroll: 3,
     autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 3,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };

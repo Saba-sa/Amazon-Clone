@@ -3,6 +3,7 @@ import "./Sliders.scss";
 import SliderComponent from "../reusable/Slider/SliderComponent";
 import Oneitem from "../reusable/Oneitem";
 import Fouritems from "../reusable/Fouritems";
+import OnebyThree from "../reusable/OnebyThree.jsx";
 import { Datafetch } from "../../dataFetch/Datafetch.js";
 import data from "../../data/Fashon.json";
 const Sliders = () => {
@@ -16,9 +17,9 @@ const Sliders = () => {
     url: "products/category/women's clothing",
   });
   return (
-    <section className="max-width slider-section">
-      <div className="content">
-        <div className="slider1">
+    <section className="max-width  relative top:0 lg:top-[-300px] xl:top-[-380px]">
+      <div className="content flex flex-col w-full gap-6">
+        <div className="slider1 w-full">
           <SliderComponent
             data={data_Electronics}
             title={"Electronics"}
@@ -32,11 +33,22 @@ const Sliders = () => {
             dataFromApi={true}
           />
         </div>
-        <div className="slider3">
-          <Oneitem data={data_menClothing[0]} dataFromApi={true} />
-          <Oneitem data={data_Electronics[1]} dataFromApi={true} />
-          <Oneitem data={data_menClothing[2]} dataFromApi={true} />
-          <Oneitem data={data_womenClothing[3]} dataFromApi={true} />
+        <div className="slider3 w-full px-10 flex gap-4 flex-col items-center sm:flex-row justify-center overflow-hidden ">
+          <div>
+            <Oneitem data={data_menClothing[0]} dataFromApi={true} />
+          </div>
+          <div>
+            <Oneitem data={data_Electronics[1]} dataFromApi={true} />
+          </div>
+          <div>
+            <Oneitem data={data_menClothing[2]} dataFromApi={true} />
+          </div>
+          <div className="hidden md:inline w-80 ">
+            <OnebyThree heading="Eat" data={[...data.data]} />
+          </div>
+          <div className="hidden lg:inline">
+            <Oneitem data={data_womenClothing[3]} dataFromApi={true} />
+          </div>
         </div>
         <div className="slider4">
           <SliderComponent
@@ -52,10 +64,22 @@ const Sliders = () => {
             dataFromApi={true}
           />
         </div>
-        <div className="slider6">
-          <Oneitem data={data_menClothing[3]} dataFromApi={true} />
-          <Oneitem data={data_womenClothing[2]} dataFromApi={true} />
-          <Fouritems heading="Eat" data={[...data.data]} />
+        <div className="slider6 overflow-hidden px-10 w-full flex flex-col sm:flex-row gap-4 justify-center">
+          <div>
+            <Oneitem data={data_menClothing[3]} dataFromApi={true} />
+          </div>
+          <div>
+            <Oneitem data={data_menClothing[1]} dataFromApi={true} />
+          </div>
+          <div className="hidden md:inline">
+            <Fouritems heading="Eat" data={[...data.data]} />
+          </div>
+          <div>
+            <Oneitem data={data_menClothing[2]} dataFromApi={true} />
+          </div>
+          <div>
+            <Oneitem data={data_menClothing[0]} dataFromApi={true} />
+          </div>
         </div>
         <div className="slider7">
           <SliderComponent
