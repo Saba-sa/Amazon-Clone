@@ -25,6 +25,7 @@
 img {
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 @media (max-width: 640px) {
   .main-section {
@@ -46,3 +47,5 @@ img {
     padding-bottom: 250px;
   }
 }
+=======
+>>>>>>> 53d02524cda59816099b48a2e8c82e92ddf807d4

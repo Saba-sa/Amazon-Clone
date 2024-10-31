@@ -15,7 +15,11 @@ const Header = () => {
         Get free delivery on orders over $100
       </p>
       <header
+<<<<<<< HEAD
         className="max-width sticky top-0 z-30
+=======
+        className="max-width sticky top-0 z-10
+>>>>>>> 53d02524cda59816099b48a2e8c82e92ddf807d4
        p-4 overflow-hidden bg-slate-900"
       >
         <div className="content flex sm:items-center  flex-col sm:flex-row gap-4  ">

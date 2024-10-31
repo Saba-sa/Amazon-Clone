@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Slider {
   position: relative; 
   z-index: 0; 
@@ -7,6 +8,18 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   }
 
+=======
+@import "../../css-config/mixins.scss";
+.Slider {
+  .slide img {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+>>>>>>> 53d02524cda59816099b48a2e8c82e92ddf807d4
   .control-arrow {
     height: 30%;
     width: 5%;
