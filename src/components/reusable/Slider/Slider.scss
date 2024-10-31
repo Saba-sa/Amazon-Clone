@@ -1,0 +1,15 @@
+.slider {
+  background: white;
+  width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60%;
+      cursor: pointer;
+    }
+  }
+}

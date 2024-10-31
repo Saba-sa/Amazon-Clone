@@ -1,0 +1,120 @@
+@import "../css-config/mixins.scss";
+.cart-section {
+  .cart-detail {
+    h1 {
+      font-size: 40px;
+    }
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+  .frequently-repurchased-items {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .btn {
+      padding: 0.8rem;
+      cursor: pointer;
+      border: none;
+      font-size: 18px;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    .btn1 {
+      background: $orange;
+    }
+  }
+}
+.contains-item-ui {
+  display: flex;
+  gap: 20px;
+  width: 95%;
+  margin: 30px auto;
+  .cart-item-detail {
+    background: $wColor;
+    width: 100%;
+    padding: 20px 0 15px 0;
+    .heaing {
+      font-size: 30px;
+      font-weight: 600;
+      padding-left: 2rem;
+    }
+    .action {
+      margin: 1rem 2rem;
+      border: none;
+      color: blue;
+      cursor: pointer;
+      background: transparent;
+    }
+    .ruler {
+      border: 1px solid rgba(128, 128, 128, 0.527);
+      width: 90%;
+      margin: auto;
+    }
+    .item-detail {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      position: relative;
+      .item-price {
+        text-align: end;
+        position: absolute;
+        right: 0;
+        .item-price-value {
+          display: flex;
+        }
+      }
+      .item-name {
+        font-size: 30px;
+      }
+      .status {
+        color: $priceColoe;
+        font-weight: 600;
+      }
+      .quantity {
+        width: 80%;
+      }
+    }
+    .items {
+      margin-top: 2rem;
+    }
+  }
+  .items {
+    background: $wColor;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+      border-bottom: 1px solid gray;
+      .api-img {
+        width: 20%;
+      }
+    }
+  }
+  .cart-item-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 10px;
+    background: $wColor;
+  }
+}
