@@ -41,4 +41,20 @@ img {
     margin-top: 0px;
   }
 }
+@media (min-width: 1024px) {
+  .main-section {
+    padding-bottom: 250px;
+    background: #000;
+  }
 
+  .square-item {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 1023px) {
+  .square-item {
+    width: 100%;
+    height: auto;
+  }
+}

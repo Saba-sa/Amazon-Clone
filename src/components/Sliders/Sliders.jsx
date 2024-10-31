@@ -17,15 +17,15 @@ const Sliders = () => {
     url: "products/category/women's clothing",
   });
   return (
-    <section className="max-width  relative top:0 lg:top-[-300px] xl:top-[-380px]">
-      <div className="content flex flex-col w-full gap-6">
-        <div className="slider1 w-full">
-          <SliderComponent
-            data={data_Electronics}
-            title={"Electronics"}
-            dataFromApi={true}
-          />
-        </div>
+    <section className="max-w-screen-xl mx-auto relative z-20 top-0 lg:top-[100px] xl:top-[5px] px-4">
+      <div className="content flex flex-col w-full gap-6">    <div className="slider1 w-full">
+
+        <SliderComponent
+          data={data_Electronics}
+          title={"Electronics"}
+          dataFromApi={true}
+        />
+      </div>
         <div className="slider2">
           <SliderComponent
             data={data_Jewleries}

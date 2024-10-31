@@ -10,11 +10,12 @@ import Fashon from "../../data/Fashon.json";
 
 const Main = () => {
   return (
-    <section className="w-full max-w-screen-xl mx-auto px-4  py-10  z-10 -mt-20 md:-mt-40 lg:-mt-80   ">
-      <div className=" flex flex-col items-center overflow-hidden">
-        <div className="w-full grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
+    <section className="w-full max-w-screen-xl mx-auto px-4 py-10 z-20 relative -mt-20 lg:-mt-80">
 
-          <div className="relative flex flex-col shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 max-w-full">
+      <div className="flex flex-col items-center overflow-hidden">
+        <div className="w-full grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+          <div className="relative flex flex-col shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 w-full sm:w-[22rem] md:w-[18rem]">
             <Fouritems heading="Gaming accessories" data={Game.data} />
           </div>
 
